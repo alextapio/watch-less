@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch Less</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>Watch Less</h1>
+
+    <label class="toggle-row">
+      <span>Intercept YouTube</span>
+      <input id="interceptEnabled" type="checkbox">
+    </label>
+
+    <label class="toggle-row">
+      <span>Hide Gemini videos</span>
+      <input id="hideYoutubeEmbeds" type="checkbox">
+    </label>
+
+    <section class="instructions-section">
+      <div class="section-heading">
+        <strong>Instructions</strong>
+        <button id="resetPrompt" class="text-button" type="button">Reset</button>
+      </div>
+      <textarea id="summaryPrompt" spellcheck="true" aria-label="Gemini summary instructions"></textarea>
+      <p class="help">Use <code>{{VIDEO_URL}}</code> where the YouTube link should appear.</p>
+      <div class="prompt-actions">
+        <span id="promptStatus" role="status" aria-live="polite"></span>
+        <button id="savePrompt" class="primary" type="button">Save instructions</button>
+      </div>
+    </section>
+
+    <button id="settings" class="settings-button" type="button">More settings</button>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

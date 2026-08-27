@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Watch Less",
+  "description": "Redirect YouTube videos to Gemini for a summary instead of watching them.",
+  "version": "0.3.2",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icon128.png"
+    },
+    "default_title": "Watch Less",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "youtube.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "gemini.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

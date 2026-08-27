@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch Less — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Watch Less</h1>
+        <p>Send YouTube videos to Gemini for a summary instead of watching them.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Behaviour</h2>
+      <label class="toggle-row">
+        <span>
+          <strong>Intercept YouTube videos</strong>
+          <small>Redirect YouTube watch pages and Shorts to Gemini.</small>
+        </span>
+        <input id="interceptEnabled" type="checkbox">
+      </label>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Hide YouTube embeds in Gemini</strong>
+          <small>Hide embedded YouTube players and thumbnail cards in Gemini responses.</small>
+        </span>
+        <input id="hideYoutubeEmbeds" type="checkbox">
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <h2>Instructions</h2>
+          <p>Gemini receives these instructions whenever a YouTube video is intercepted.</p>
+        </div>
+        <button id="resetPrompt" class="secondary" type="button">Reset default</button>
+      </div>
+
+      <textarea id="summaryPrompt" spellcheck="true" aria-label="Gemini summary instructions"></textarea>
+      <p class="help">Available placeholders: <code>{{VIDEO_URL}}</code>, <code>{{VIDEO_TITLE}}</code>, <code>{{CHANNEL_NAME}}</code>. The URL placeholder is recommended.</p>
+    </section>
+
+    <footer>
+      <span id="status" role="status" aria-live="polite"></span>
+      <button id="save" class="primary" type="button">Save settings</button>
+    </footer>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>

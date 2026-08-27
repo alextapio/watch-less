@@ -1,0 +1,97 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: Canvas;
+  color: CanvasText;
+}
+
+main {
+  width: min(820px, calc(100% - 40px));
+  margin: 48px auto;
+}
+
+header { margin-bottom: 28px; }
+h1 { margin: 0 0 8px; font-size: 32px; }
+h2 { margin: 0 0 8px; font-size: 18px; }
+p { margin: 0; opacity: .72; }
+
+.card {
+  margin: 16px 0;
+  padding: 22px;
+  border: 1px solid color-mix(in srgb, CanvasText 15%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, Canvas 96%, CanvasText 4%);
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.toggle-row + .toggle-row {
+  border-top: 1px solid color-mix(in srgb, CanvasText 10%, transparent);
+}
+
+.toggle-row strong, .toggle-row small { display: block; }
+.toggle-row small { margin-top: 4px; opacity: .65; }
+.toggle-row input { width: 20px; height: 20px; }
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 360px;
+  resize: vertical;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  background: Canvas;
+  color: CanvasText;
+  font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.help { margin-top: 10px; font-size: 13px; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+#status { margin-right: auto; font-size: 13px; opacity: .75; }
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary {
+  background: #1a73e8;
+  color: white;
+}
+
+.secondary {
+  background: color-mix(in srgb, CanvasText 9%, transparent);
+  color: CanvasText;
+}
