@@ -1,6 +1,6 @@
 # Watch Less
 
-![Watch Less](assets/thumbnail.png)
+![Watch Less](assets/cover.png)
 
 Watch Less is a small Chrome extension that intercepts YouTube videos and sends the video URL to Gemini with an editable summarisation prompt, helping you read the substance of a video instead of automatically watching it.
 
